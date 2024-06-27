@@ -16,7 +16,6 @@
 
 package org.logant.simple.Controller;
 
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,11 +27,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Controller
 @RestController
-public class HelloController {
+public class IndexController {
 
-	@GetMapping("/")
-	public String hello(Authentication authentication) {
-		return "Hello, " + authentication.getName() + "!";
+	@GetMapping("/hello")
+	public String index() {
+		return "index";
 	}
 
 }
